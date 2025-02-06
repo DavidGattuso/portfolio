@@ -1,0 +1,238 @@
+/* ===== Estilos Generales ===== */
+body {
+    font-family: Arial, sans-serif;
+    /* Fuente por defecto */
+    color: #333;
+    /* Color de texto principal */
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    border-bottom: 1px solid #e0e0e0;
+    /* Línea sutil en la parte inferior */
+    padding: 0.5rem 1rem;
+    /* Espaciado interno */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+}
+
+.navbar-brand img {
+    width: 100px;
+    /* Tamaño del logo */
+    height: auto;
+    /* Mantiene la proporción */
+    margin-right: 1rem;
+    /* Espacio entre el logo y el menú */
+}
+
+.navbar-nav {
+    gap: 1.5rem;
+    /* Espacio entre los elementos del menú */
+    justify-content: center;
+    /* Centra los elementos del menú */
+    flex-grow: 1;
+    /* Ocupa el espacio disponible */
+}
+
+.nav-link {
+    color: #555;
+    /* Color gris para los enlaces */
+    font-weight: 500;
+    /* Texto semi-grueso */
+    padding: 0.25rem 0.5rem;
+    /* Reducimos el padding interno */
+    margin: 0;
+    /* Eliminamos el margen */
+    transition: color 0.3s ease;
+    /* Transición suave */
+}
+
+.nav-link:hover {
+    color: #2ecc71;
+    /* Color verde al pasar el mouse */
+    background-color: rgba(46, 204, 113, 0.1);
+    /* Fondo suave al pasar el mouse */
+    border-radius: 4px;
+    /* Bordes redondeados */
+}
+
+.navbar-toggler {
+    border: none;
+    /* Elimina el borde */
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    /* Elimina el sombreado al hacer clic */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .navbar-nav {
+        flex-direction: column;
+        /* Apila los elementos verticalmente */
+        align-items: center;
+        /* Centra los elementos */
+    }
+
+    .navbar-brand img {
+        margin-right: 0;
+        /* Elimina el margen en móviles */
+    }
+}
+
+/* ===== Sección Hero ===== */
+.hero {
+    padding: 4rem 0;
+    /* Espaciado interno */
+    background-color: #f8f9fa;
+    /* Fondo claro */
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    /* Tamaño del título */
+    font-weight: 600;
+    /* Grosor de la fuente */
+    color: #333;
+    /* Color del texto */
+}
+
+.hero h2 {
+    font-size: 1.75rem;
+    /* Tamaño del subtítulo */
+    font-weight: 500;
+    /* Grosor de la fuente */
+    color: #555;
+    /* Color del texto */
+    margin-bottom: 1.5rem;
+    /* Espacio debajo del subtítulo */
+}
+
+.hero .btn-primary {
+    background-color: #2ecc71;
+    /* Color del botón */
+    border: none;
+    /* Elimina el borde */
+    padding: 0.75rem 1.5rem;
+    /* Espaciado interno */
+    font-size: 1rem;
+    /* Tamaño del texto */
+    transition: background-color 0.3s ease;
+    /* Transición suave */
+    margin-bottom: 1.5rem;
+    /* Espacio debajo del botón */
+}
+
+.hero .btn-primary:hover {
+    background-color: #27ae60;
+    /* Cambia el color al pasar el mouse */
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    /* Tamaño del texto */
+    color: #666;
+    /* Color del texto */
+    line-height: 1.6;
+    /* Espaciado entre líneas */
+    margin-top: 1.5rem;
+    /* Espacio arriba del párrafo */
+}
+
+.hero img.hero-image {
+    max-width: 80%;
+    /* Reduce el tamaño de la imagen */
+    height: auto;
+    /* Mantiene la proporción */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+}
+
+@media (max-width: 768px) {
+    .hero img.hero-image {
+        max-width: 100%;
+        /* Ajusta el tamaño para móviles */
+        margin-top: 1.5rem;
+        /* Espacio arriba de la imagen en móviles */
+    }
+}
+
+/* ===== Sección Habilidades ===== */
+.habilidades {
+    padding: 4rem 0;
+    /* Espaciado interno */
+    background-color: #ffffff;
+    /* Fondo blanco */
+}
+
+.habilidades h2 {
+    font-size: 2rem;
+    /* Tamaño del título */
+    font-weight: 600;
+    /* Grosor de la fuente */
+    color: #333;
+    /* Color del texto */
+    margin-bottom: 2rem;
+    /* Espacio debajo del título */
+}
+
+.habilidades h3 {
+    font-size: 1.5rem;
+    /* Tamaño del subtítulo */
+    font-weight: 500;
+    /* Grosor de la fuente */
+    color: #555;
+    /* Color del texto */
+    margin-bottom: 1.5rem;
+    /* Espacio debajo del subtítulo */
+}
+
+/* Contenedor de habilidades */
+.habilidades .d-flex {
+    gap: 4rem;
+    /* Aumentar aún más el espacio entre las imágenes */
+    flex-wrap: wrap;
+    /* Permitir que las imágenes se envuelvan en varias líneas */
+    justify-content: flex-start;
+    /* Alinear las imágenes al inicio */
+}
+
+.habilidad-img {
+    width: 80px;
+    /* Tamaño de las imágenes */
+    height: 80px;
+    /* Tamaño de las imágenes */
+    object-fit: contain;
+    /* Asegura que la imagen se ajuste sin distorsión */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    /* Transición suave */
+    opacity: 0.8;
+    /* Opacidad inicial */
+    margin: 1.5rem;
+    /* Aumentar aún más el margen entre las imágenes */
+}
+
+.habilidad-img:hover {
+    transform: scale(1.1);
+    /* Efecto de escala al pasar el mouse */
+    opacity: 1;
+    /* Opacidad completa al pasar el mouse */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .habilidad-img {
+        width: 60px;
+        /* Tamaño más pequeño para móviles */
+        height: 60px;
+        /* Tamaño más pequeño para móviles */
+    }
+
+    .habilidades .d-flex {
+        gap: 2.5rem;
+        /* Reducir el espacio entre imágenes en móviles */
+    }
+}
