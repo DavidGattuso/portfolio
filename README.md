@@ -1,1 +1,1 @@
-https://davidgattuso.github.io/portfolio/#
+https://davidgattuso.github.io/portfolio/
