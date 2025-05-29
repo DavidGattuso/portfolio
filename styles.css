@@ -1,169 +1,426 @@
 /* ===== Estilo Retro Arcade / Consola ===== */
 body {
-    font-family: 'Press Start 2P', cursive;
-    background-color: #111;
-    color: #00ffcc;
+  font-family: 'Press Start 2P', cursive;
+  background-color: #111;
+  color: #00ffcc;
+  font-size: 12px;
 }
 
 body::before {
-    content: "";
-    background-image: repeating-linear-gradient(#00ffcc 1px, transparent 2px),
-                      repeating-linear-gradient(90deg, #00ffcc 1px, transparent 2px);
-    background-size: 20px 20px;
-    opacity: 0.05;
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    z-index: -1;
+  content: "";
+  background-image: repeating-linear-gradient(#00ffcc 1px, transparent 2px),
+                    repeating-linear-gradient(90deg, #00ffcc 1px, transparent 2px);
+  background-size: 20px 20px;
+  opacity: 0.05;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* ===== Navbar Retro ===== */
 .navbar {
-    border-bottom: 2px solid #00ffcc;
-    background-color: #222;
-    padding: 0.5rem 1rem;
+  border-bottom: 2px solid #00ffcc;
+  background-color: #222;
+  padding: 0.5rem 1rem;
 }
 
 .navbar-brand img {
-    width: 100px;
-    height: auto;
-    margin-right: 1rem;
+  width: 100px;
+  height: auto;
+  margin-right: 1rem;
 }
 
 .navbar-nav {
-    gap: 1.5rem;
-    justify-content: center;
-    flex-grow: 1;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-grow: 1;
 }
 
 .nav-link {
-    color: #00ffcc !important;
-    font-weight: bold;
-    text-shadow: 1px 1px #000;
-    transition: color 0.3s ease;
+  color: #00ffcc !important;
+  font-weight: bold;
+  text-shadow: 1px 1px #000;
+  transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #ff00ff !important;
-    background-color: rgba(255, 0, 255, 0.1);
-    border-radius: 4px;
+  color: #ff00ff !important;
+  background-color: rgba(255, 0, 255, 0.1);
+  border-radius: 4px;
 }
 
 .navbar-toggler {
-    border: none;
+  border: 2px solid #00ffcc;
+  background-color: #111;
+  padding: 0.4rem;
 }
 
 .navbar-toggler:focus {
-    box-shadow: none;
+  box-shadow: 0 0 5px #00ffcc;
+  outline: none;
 }
 
-@media (max-width: 768px) {
-    .navbar-nav {
-        flex-direction: column;
-        align-items: center;
-    }
-    .navbar-brand img {
-        margin-right: 0;
-    }
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 255, 204, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  filter: drop-shadow(0 0 1px #00ffcc);
 }
 
 /* ===== Sección Hero Retro ===== */
 .hero {
-    padding: 4rem 0;
-    background: linear-gradient(135deg, #1a1a1a 0%, #111 100%);
-    border-top: 4px double #00ffcc;
-    border-bottom: 4px double #00ffcc;
-    text-align: center;
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #111 100%);
+  border-top: 4px double #00ffcc;
+  border-bottom: 4px double #00ffcc;
+  text-align: center;
 }
 
 .hero h1 {
-    font-size: 1.8rem;
-    color: #00ffcc;
+  font-size: 1.8rem;
+  color: #00ffcc;
 }
 
 .hero h2 {
-    font-size: 1.2rem;
-    color: #ff00ff;
-    margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  color: #ff00ff;
+  margin-bottom: 1.5rem;
 }
 
 .hero .btn-primary {
-    background-color: transparent;
-    border: 2px solid #00ffcc;
-    color: #00ffcc;
-    font-size: 0.8rem;
-    padding: 0.75rem 1.5rem;
-    transition: background-color 0.3s ease;
-    margin-bottom: 1.5rem;
+  background-color: transparent;
+  border: 2px solid #00ffcc;
+  color: #00ffcc;
+  font-size: 0.8rem;
+  padding: 0.75rem 1.5rem;
+  transition: background-color 0.3s ease;
+  margin-bottom: 1.5rem;
 }
 
 .hero .btn-primary:hover {
-    background-color: #00ffcc;
-    color: #111;
+  background-color: #00ffcc;
+  color: #111;
 }
 
 .hero-description {
-    font-size: 0.75rem;
-    color: #66ffee;
-    line-height: 1.6;
-    margin-top: 1.5rem;
+  font-size: 0.75rem;
+  color: #66ffee;
+  line-height: 1.6;
+  margin-top: 1.5rem;
 }
 
 .hero img.hero-image {
-    max-width: 80%;
-    height: auto;
-    border-radius: 10px;
-    border: 3px dashed #00ffcc;
-    filter: contrast(1.2) grayscale(0.2);
-}
-
-@media (max-width: 768px) {
-    .hero img.hero-image {
-        max-width: 100%;
-        margin-top: 1.5rem;
-    }
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+  border: 3px dashed #00ffcc;
+  filter: contrast(1.2) grayscale(0.2);
 }
 
 /* ===== Sección Habilidades Retro ===== */
 .habilidades {
-    padding: 4rem 0;
-    background-color: #111;
-    border-top: 4px dotted #ff00ff;
+  padding: 4rem 0;
+  background-color: #111;
+  border-top: 4px dotted #ff00ff;
 }
 
 .habilidades h2,
 .habilidades h3 {
-    color: #00ffcc;
-    text-shadow: 1px 1px #000;
+  color: #00ffcc;
+  text-shadow: 1px 1px #000;
 }
 
 .habilidades .d-flex {
-    gap: 4rem;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+  gap: 4rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .habilidad-img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    opacity: 0.8;
-    margin: 1.5rem;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0.8;
+  margin: 1.5rem;
 }
 
 .habilidad-img:hover {
-    transform: scale(1.1);
-    opacity: 1;
-    filter: brightness(1.5);
+  transform: scale(1.1);
+  opacity: 1;
+  filter: brightness(1.5);
 }
 
-@media (max-width: 768px) {
-    .habilidad-img {
-        width: 60px;
-        height: 60px;
-    }
+/* ===== Sección Proyectos Retro ===== */
+.proyectos {
+  padding: 4rem 0;
+  background-color: #111;
+  border-top: 4px dotted #ff00ff;
+}
 
-    .habilidades .d-flex {
-        gap: 2.5rem;
-    }
+.proyecto-card {
+  background-color: #1c1c1c;
+  border: 3px solid transparent;
+  border-image: linear-gradient(135deg, #00ffff, #ff00ff);
+  border-image-slice: 1;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.proyecto-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px #00ffff;
+}
+
+.proyecto-titulo {
+  font-size: 1rem;
+  color: #00ffcc;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px #000;
+}
+
+.proyecto-img {
+  width: 100%;
+  max-width: 200px;
+  margin: 1rem auto;
+  background: #444;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.proyecto-btns {
+  margin-bottom: 1rem;
+}
+
+.btn-ver {
+  background-color: #00ff00;
+  color: #111;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.7rem;
+  margin: 0 0.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ver:hover {
+  background-color: #00cc00;
+}
+
+.proyecto-tags span {
+  display: inline-block;
+  background-color: #333;
+  color: #ccc;
+  padding: 0.3rem 0.6rem;
+  margin: 0.2rem;
+  font-size: 0.6rem;
+  border-radius: 4px;
+  border: 1px solid #555;
+}
+
+/* ===== Sección Educación Retro ===== */
+.educacion {
+  padding: 4rem 0;
+  background-color: #111;
+  border-top: 4px dotted #ff00ff;
+}
+
+.logo-educacion {
+  width: 150px;
+  max-width: 100%;
+  height: auto;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00ffcc;
+  transition: transform 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.logo-educacion:hover {
+  transform: scale(1.05);
+}
+
+.educacion-texto {
+  color: #00ffcc;
+  font-size: 0.75rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.educacion-bloque {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.educacion-bloque p {
+  color: #00ffcc;
+  font-size: 0.7rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.educacion-bloque strong {
+  color: #ff00ff;
+}
+
+
+/* ===== Sección Contacto Retro ===== */
+.contacto {
+  padding: 4rem 0;
+  background-color: #111;
+  border-top: 4px dotted #ff00ff;
+  text-align: center;
+}
+
+.contacto-texto {
+  color: #00ffcc;
+  font-size: 0.75rem;
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contacto-iconos {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.contacto-icono img {
+  width: 48px;
+  height: 48px;
+  filter: brightness(1.4) drop-shadow(0 0 4px #00ffff);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.contacto-icono img:hover {
+  transform: scale(1.2);
+  filter: brightness(2) drop-shadow(0 0 12px #ff00ff);
+}
+
+/* ===== Media Queries Responsivos ===== */
+
+/* Tablets (≤768px) */
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-brand img {
+    margin-right: 0;
+  }
+
+  .hero img.hero-image {
+    max-width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .habilidad-img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .habilidades .d-flex {
+    gap: 2.5rem;
+  }
+
+  .logo-educacion {
+    width: 120px;
+  }
+
+  .educacion-texto {
+    font-size: 0.7rem;
+    padding: 0 1rem;
+  }
+
+  .educacion-bloque p {
+    font-size: 0.65rem;
+  }
+}
+
+/* Móviles (≤576px) */
+@media (max-width: 576px) {
+  body {
+    font-size: 10px;
+  }
+
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.2rem;
+  }
+
+  .hero h2 {
+    font-size: 1rem;
+  }
+
+  .hero-description {
+    font-size: 0.65rem;
+  }
+
+  .hero .btn-primary {
+    font-size: 0.7rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .logo-educacion {
+    width: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .educacion-texto {
+    font-size: 0.65rem;
+    line-height: 1.6;
+    padding: 0 1rem;
+    text-align: left;
+  }
+
+  .educacion-bloque p {
+    font-size: 0.6rem;
+    padding: 0 0.5rem;
+  }
+
+  .contacto-iconos {
+    gap: 1.5rem;
+  }
+
+  .contacto-icono img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .contacto-texto {
+    font-size: 0.65rem;
+  }
+
+  .btn-ver {
+    font-size: 0.6rem;
+    padding: 0.3rem 0.6rem;
+    margin: 0.3rem;
+  }
+
+  .proyecto-tags span {
+    font-size: 0.5rem;
+    padding: 0.2rem 0.5rem;
+  }
 }
